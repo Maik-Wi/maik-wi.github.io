@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey, ich bin Maik</title>
+  <!-- Google Font: Fredoka One -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    * { box‑sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Fredoka One', sans-serif;
+      background: #fafafa;
+      display: flex; flex-direction: column; align-items: center;
+      height: 100vh; overflow: hidden;
+    }
+    .header {
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .intro {
+        margin-top: 1em;
+        font-weight: 300;
+    }
+    .card-container {
+      position: relative;
+      width: 90vw; max-width: 400px;
+      height: 80vw; max-height: 400px;
+      margin-top: 1.5rem;
+      overflow: visible;
+    }
+    .card-wrapper {
+      position: absolute;
+      width: 100%; height: 100%;
+      overflow: visible;
+    }
+    .card-content {
+      position: relative;
+      width: 100%; height: 100%;
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      background: #000;
+      /* Hier die Animationen definieren */
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+    .card-content.swipe-right {
+      transform: translateX(120%) rotate(20deg);
+      opacity: 0;
+    }
+    .card-content.swipe-left {
+      transform: translateX(-120%) rotate(-20deg);
+      opacity: 0;
+    }
+    .card-content img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(0.6);
+    }
+    .caption {
+      position: absolute; bottom: 50px;
+      width: 100%; text-align: center;
+      font-size: 1.1rem; color: #fff;
+      letter-spacing: 1px; padding: 0 1rem;
+      max-width: 350px;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 600;
+    }
+    .buttons {
+      position: absolute; bottom: -30px;
+      width: 100%; display: flex; justify-content: space-around;
+      z-index: 100;
+    }
+    .buttons button {
+      width: 60px; height: 60px; border-radius: 50%;
+      border: none; background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 2rem; display: flex;
+      align-items: center; justify-content: center;
+      cursor: pointer; transition: transform 0.2s ease;
+    }
+    .buttons button:active { transform: scale(0.9); }
+    .end-message {
+      font-size: 1.4rem;
+      text-align: center;
+      padding: 7rem 2rem;
+      border: 5px dotted black;
+    }
+    .manual {
+        margin-top: 3em;
+        color: #afafaf;
+        max-width: 400px;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+    }
+    .insta {
+      margin-top: 2.6rem; font-size: 1rem;
+    }
+
+    .instagram-button {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .instagram-button:hover {
+      transform: scale(1.05);
+    }
+
+    .instagram-button svg {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    .footer {
+        margin-top: 3em;
+        color: #afafaf;
+        max-width: 400px;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">Hey, ich bin Maik</div>
+  <div class="intro"><p>Wahrscheinlich bin ich gerade besoffen. Ich lebe in Hamburg, mag Bier, Whisky und Brüste.</p></div>
+  <div class="card-container" id="cardContainer"></div>
+  <div class="manual">
+      <p>Swipe nach links wenn du das anders siehst oder nach rechts wenn du das ähnlich siehst.</p>
+  </div>
+  <div class="insta">
+    <a class="instagram-button" href="https://instagram.com/maik_wi" target="_blank" rel="noopener">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1 141zm0 186.6c-39.5 0-71.6-32.1-71.6-71.6s32.1-71.6 71.6-71.6 71.6 32.1 71.6 71.6-32.1 71.6-71.6 71.6zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-.1-54.6-44.4-98.9-99-99H100.4C45.9 61.5 1.6 105.8 1.5 160.3v191.5c.1 54.6 44.4 98.9 99 99h247.1c54.6-.1 98.9-44.4 99-99V160.3zM398.8 351c0 30.5-24.7 55.2-55.2 55.2H104.4c-30.5 0-55.2-24.7-55.2-55.2V160.3c0-30.5 24.7-55.2 55.2-55.2h239.2c30.5 0 55.2 24.7 55.2 55.2V351z"/>
+        </svg>
+        Folge mir auf Instagram
+      </a>
+  </div>
+  <div class="footer">
+    <p>Das Scannen dieses Codes kann zu spontanen Gesprächen, Gruppenselfies, Lachkrämpfen und merkwürdigen Tattoo-Ideen führen.</p>
+    <p>Bonuslevel: Wer mir ein Bier bringt, bekommt... ein Bier zurück.</p>
+    <p><br></p>
+  </div>
+
+  <script language="JavaScript" src="https://www.besucherzaehler-kostenlos.de/js/counter.js.php?count=1&id=Gduq8TlZqY&start=0&design=1e"></script>
+
+  <script>
+    const cards = [
+      { img: "https://file.maik.io/qr/1.jpeg", text: "Ich bin nicht verantwortungslos – ich bin flüssig flexibel!" },
+      { img: "https://file.maik.io/qr/2.jpeg", text: "Schönheit liegt im Auge des Bierhalters." },
+      { img: "https://file.maik.io/qr/3.jpeg", text: "Lieber einen sitzen haben, als einen stehen lassen." },
+      { img: "https://file.maik.io/qr/4.jpeg", text: "Ich brauche keinen Therapeuten – ich hab Schnaps und Freunde." },
+      { img: "https://file.maik.io/qr/5.jpeg", text: "Alkohol löst keine Probleme. Aber Milch halt auch nicht." },
+    ];
+    let current = 0, likes = 0;
+    const container = document.getElementById('cardContainer');
+
+    function showCard(i) {
+      if (i >= cards.length) return showEndMessage();
+
+      const { img, text } = cards[i];
+      const wrapper = document.createElement('div');
+      wrapper.className = 'card-wrapper';
+
+      const content = document.createElement('div');
+      content.className = 'card-content';
+      content.innerHTML = `<img src="${img}"><div class="caption">${text}</div>`;
+
+      const btns = document.createElement('div');
+      btns.className = 'buttons';
+      btns.innerHTML = `
+        <button onclick="quickSwipe('left')">❌</button>
+        <button onclick="quickSwipe('right')">❤️</button>
+      `;
+
+      wrapper.append(content, btns);
+      container.innerHTML = '';
+      container.appendChild(wrapper);
+
+      // Touch‑Events
+      let startX = 0;
+      wrapper.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+      wrapper.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        if (endX - startX > 50) animateSwipe('right', content);
+        else if (startX - endX > 50) animateSwipe('left', content);
+      });
+    }
+
+    // wenn Button gedrückt wird
+    function quickSwipe(dir) {
+      const content = document.querySelector('.card-content');
+      animateSwipe(dir, content);
+    }
+
+    // animiert zuerst, wartet dann und zählt
+    function animateSwipe(dir, el) {
+      el.classList.add(dir === 'right' ? 'swipe-right' : 'swipe-left');
+      setTimeout(() => {
+        if (dir === 'right') likes++;
+        current++;
+        showCard(current);
+      }, 400);
+    }
+
+    function showEndMessage() {
+      container.innerHTML = `
+        <div class="end-message">
+          ${likes >= 3
+            ? "Hast du jetzt genug auf dein Handy geschaut? Komm rüber, lass uns einen trinken! 🍻"
+            : "Hast du gut gemacht, hab einen tollen Tag! 😄"}
+        </div>`;
+    }
+
+    showCard(current);
+  </script>
+
+</body>
+</html>
