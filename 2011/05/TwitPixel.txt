@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{PageTitle}</title>
+<link rel="shortcut icon" href="http://buntepixel.org/wp-content/uploads/2011/04/buntepixelcrew.gif" type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" href="http://buntepixel.org/wp-content/themes/seven-five/images/apple-touch-icon.png">
+
+<meta name="color:Background" content="#f5f5f5"/>
+<meta name="color:Header Bar" content="#282828"/>
+<meta name="color:Title" content="#fff"/>
+<meta name="color:Subtitle" content="#818181"/>
+<meta name="color:Description" content="#565656"/>
+<meta name="color:Post Body" content="#A9A9A9"/>
+<meta name="color:Post Details" content="#C9C9C9"/>
+<meta name="color:Comments" content="#aaa"/>
+<meta name="color:Link" content="#6a6a6a"/>
+
+
+<style type="text/css">
+* {padding:0;margin:0;}
+img {border:0;}
+.clear {clear:both;font-size:5px;}
+.left {float:left;}
+.right {float:right;}
+.text-right {text-align:right;}
+.center {text-align:center;}
+.small {font-size:11px !important;}
+.xsmall {font-size:10px;}
+.xxsmall {font-size:9px;}
+.normal {font-size:12px !important;}
+.big {font-size:14px !important;}
+.bigger {font-size:16px !important;}
+.black {color:#000;}
+.green1,.green1:hover {color:#7ba709;}
+.green2,.green2:hover {color:#6f9904;}
+.darkgray {color:#333;}
+.strong {font-weight:bold;}
+.absolute-right {position:absolute;top:0;right:0;}
+.white {color:#fff;}
+.red {color:#f00;}
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Indie Flower'), local('IndieFlower'), url('http://themes.googleusercontent.com/font?kit=10JVD_humAd5zP2yrFqw6pS3E-kSBmtLoNJPDtbj2Pk') format('truetype');
+}
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yanone Kaffeesatz Regular'), local('YanoneKaffeesatz-Regular'), url('http://themes.googleusercontent.com/font?kit=YDAoLskQQ5MOAgvHUQCcLXH4RvoIgd8UGj-uxFsyfXs') format('truetype');
+}
+
+#posterous_footerbar{display:none;}
+
+body {
+    background:{color:Background};
+    color:{color:Description};
+    font-family:Helvetica,Arial,Sans-Serif;
+    font-size:.75em;
+}
+a { color:{color:Link}; text-decoration:none; }
+a:hover { color:#4a4a4a; }
+
+.header {
+    background:#FFF;
+    padding:10px 0;
+    text-align:center;
+    border-top: 5px solid #414141;
+    margin-bottom:80px;
+}
+.header h1 {
+font-family: 'Yanone Kaffeesatz';
+font-color: #000;
+font-size:2.5em;
+}
+
+.back-to-blog {
+    background:#414141;
+    float:left;
+    margin-left:5px;
+    padding:7px 12px;
+    text-transform:uppercase;
+    border-radius-:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+    .back-to-blog a {
+        color:#7b7b7b;
+    }
+
+    .back-to-blog a:hover {
+        color:#eee;
+    }
+
+h2,.post,.block-tags,.block-location,.block-comments,div.posterous_comments h4, div.spanningheader h4 {
+    font-family:"Helvetica-Light",Arial, Helvetica, sans-serif;
+}
+
+h3,.block-profile,.viewcount {
+    font-family:"HelveticaNeue-Light",Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color:{color:Title};
+    display:inline;
+    font-size:1.25em;
+    font-weight:normal;
+}
+
+    h1 a {
+        color:#000;
+        text-decoration:none;
+    }
+    
+    h1 a:hover {
+        color:#eee;
+    }
+    
+.subtitle {
+    color:{color:Subtitle};
+    font-size:1.25em;
+    padding-left:5px;
+}
+
+.pages {
+    background:#ddd;
+    padding:2px 0 6px;
+    text-align:center;
+}
+
+    .pages li {
+        display:inline-block;
+        font-size:1.2em;
+        padding:0 10px;
+    }
+    
+    .pages li a {
+        color:#333;
+    }
+    
+    .pages li a:hover {
+        text-decoration:underline;
+    }
+    
+    .pages li.current {
+        color:#333;
+        font-weight:bold;
+    }
+
+.posts {
+    margin:0 auto;
+    width:565px;
+}
+
+.postunit {
+    margin-bottom:50px;
+    padding:10px 0 0 70px;
+    position:relative;
+}
+
+.postunit h2, .postunit h2 a {
+font-family: 'Indie Flower';
+font-size: 1.5em;
+color: #000;
+text-align:center;
+}
+        .postunit .mini_commands {
+            display:none;
+        }
+        
+        .postunit:hover .mini_commands {
+            display:block;
+            left:70px;
+            position:absolute;
+            top:-10px;
+        }
+        
+        .postunit:hover .fav_star {
+            display:block;
+            position:absolute;
+            right:0;
+            top:0;
+            /* margin-top:9px !important; */
+        }
+
+.timestamp {
+    background:#e8e8e8;
+    color:#fff;
+    left:0;
+    line-height:2em;
+    padding:5px 0;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:60px;
+    display:none;
+}
+
+.viewcount {
+    color:{color:Post Body};
+    font-size:11px;
+    left:0;
+    position:absolute;
+    text-align:center;
+    top:63px;
+    width:60px;
+}
+
+    .month {
+        font-size:1.25em;
+        text-transform:uppercase;
+    }
+    
+    .date {
+        display:block;
+        font-size:2.5em;
+        font-weight:bold;
+    }
+    
+    .timestamp:hover {
+        background:#ddd;
+        color:#fff;
+    }
+    
+    h2 {
+        color:{color:Post Body};
+        font-weight:normal;
+    }
+    
+        h2 a {
+            color:{color:Post Body};
+        }
+        
+            h2 a:hover {
+                color:#959595;
+            }
+
+    .post {
+        color:{color:Post Body};
+        font-size:1.25em;
+        margin-bottom:1em;
+        padding-top:.2em;
+    }
+    
+    .post p,.post div,.post ul,.post ol {
+        line-height:1.4em;
+        padding:.5em 0;
+    }
+    
+    .post ol,.post ul {
+        margin-left:25px;
+    }
+    
+    .div.posterousGalleryMainDiv {margin-top:0;}
+    
+    .icon {
+        background-image:url(http://posterous.com/themes/contra/global.gif);
+        background-repeat:no-repeat;
+        left:0;
+        position:absolute;
+        top:0;
+    }
+    
+    .i-tags {
+        background-position:0 -33px;
+        height:16px;
+        width:16px;
+    }
+    
+    .i-location {
+        background-position:0 -63px;
+        height:16px;
+        width:16px;
+    }
+    
+    .map {
+        display:block;
+        height:250px;
+        padding-top:10px;
+    }
+    
+    .i-comments {
+        background-position:0 -94px;
+        height:16px;
+        width:16px;
+    }
+    
+    div.posterous_comments h4, div.spanningheader h4 {
+        font-size:1.1em;
+        font-weight:normal;
+        margin:0 0 10px;
+    }
+    
+    .block-tags,.block-location,.block-comments {
+        margin-bottom:1em;
+        padding-left:25px;
+        position:relative;
+    }
+    
+    .block-tags {
+        color:{color:Post Details};
+        font-size:1.1em;
+    }
+    
+        .block-tags a {
+            color:{color:Post Details};
+            margin-right:5px;
+            text-decoration:none;
+        }
+        
+        .block-tags a:hover {
+            color:#bababa;
+        }
+    
+    .block-location {
+        color:{color:Post Details};
+        font-size:1.1em;
+    }
+    
+        .block-location a {
+            color:{color:Post Details};
+        }
+    
+        .block-location a:hover {
+            color:#bababa;
+        }
+    
+        .posterous_retweet_widget {
+            display:inline-block;
+            margin:-2px 0 0;
+            position:absolute;
+            right:0;
+            text-align:right;
+        }
+        
+            a.posterous_retweet {
+                color:#fff !important;
+            }
+            
+            a.posterous_retweet:hover {
+                background:#36cdff;
+                color:#fff !important;
+            }
+            
+            .comment_hide_button {
+                margin-top:15px;
+            }
+
+    .block-comments {
+        font-size:1.1em;
+        display: none;
+    }
+    
+        .commentlink {
+            color:{color:Post Details} !important;
+        }
+    
+        .block-comments a {
+            color:{color:Comments};
+        }
+    
+        .block-comments a:hover {
+            color:#bababa;
+        }
+        
+        .comment {
+            color:{color:Comments};
+            line-height:1.3em;
+            position:relative;
+        }
+        
+            .comment ul.mini_commands {
+                left:0;
+                position:absolute;
+                top:0;
+            }
+    
+        .commentname {
+            color:{color:Comments};
+            font-size:.9em;
+        }
+        
+            .commentname a {
+                color:{color:Comments};
+            }
+        
+            .commentname a:hover {
+                color:#bababa;
+            }
+    
+    .pagination {
+        margin-bottom:40px;
+        text-align:center;
+    }
+    
+        .pagination span {
+            margin-right:3px;
+        }
+    
+        .pagination .current {
+            font-weight:bold;
+        }
+
+        .pagination .disabled {
+            color:#aaa;
+        }
+
+        .pagination a {
+            border:solid 1px #ccc;
+            padding:2px 5px;
+        }
+
+        .pagination a:hover {
+            border:solid 1px #aaa;
+        }
+        
+{block:Page}
+    .block-bottom-bar-frame {
+        margin-top:200px;
+    }
+{/block:Page}
+
+    .block-bottom-bar-frame {
+        background:#414141;
+        padding:5px 10px 30px;
+    }
+    
+        .block-bottom-bar {
+            margin:0 auto;
+            width:780px;
+        }
+        
+        .list-contents {
+            padding:15px 0 25px;
+        }
+    
+    h3 {
+        color:#898989;
+        font-size:1.5em;
+        font-weight:normal;
+    }
+    
+    h3 a {
+        color:#9c9c9c;
+    }
+    
+    h3 a:hover {
+        color:#ccc;
+    }
+    
+    .block-profile {
+        color:#707070;
+        font-size:1.3em;
+        line-height:1.5em;
+        margin-bottom:30px;
+        width:390px;
+    }
+    
+        .block-profile p {
+            padding:5px 0;
+        }
+    
+        .block-profile a {
+            color:#898989;
+        }
+    
+        .block-profile a:hover {
+            color:#a0a0a0;
+        }
+    
+    .block-search {
+        margin-bottom:30px;
+    }
+
+        .search {
+            background:url(http://posterous.com/themes/contra/global.gif) no-repeat;
+            border:0;
+            color:#898989;
+            font-size:1.2em;
+            margin-top:6px;
+            padding:3px 5px 4px 23px;
+            width:211px;
+        }
+        
+        .search-section {
+            margin:20px 0 20px 70px;
+        }
+        
+            .top-search {
+                background:url(/images/icons/search16.png) no-repeat 2px 2px;
+                border:solid 1px {color:Post Body};
+                border-radius:5px;
+                -moz-border-radius:5px;
+                -webkit-border-radius:5px;
+                color:{color:Link};
+                padding:2px 2px 2px 20px;
+            }
+            
+    .block-subscribe {
+        line-height:1.5em;
+        padding-bottom:20px;
+    }
+    
+    .subscribe-posterous,.subscribe-rss {
+        color:#999;
+        display:block;
+        font-size:1em;
+        margin:3px 0;
+        padding-left:17px;
+    }
+    
+    .subscribe-posterous {background: url(/images/favicon.png) no-repeat -1px -1px;}
+    .subscribe-rss {background: url(/images/feed-icon-14x14.png) no-repeat;}
+    
+        .subscribe-posterous:hover,.subscribe-rss:hover {
+            color:#aaa;
+        }
+            
+    
+    ul.tagslist,#more-tags-listing {
+        padding:2px 0 0 3px;
+        width:366px;
+    }
+    
+    .tagslist li,#more-tags-listing li {
+        color:#6f6f6f;
+        display:inline-block;
+        font-size:1em;
+        height:1.5em;
+        line-height:1.5em;
+        list-style:none;
+        overflow:hidden;
+        padding-right:5px;
+        width:115px;
+    }
+    
+    .links li {
+        color:#6f6f6f;
+        font-size:1em;
+        height:1.5em;
+        line-height:1.5em;
+        list-style:none;
+        overflow:hidden;
+        padding-right:5px;
+        width:115px;
+    }
+    
+        .links li a,.tagslist li a,#more-tags-listing li a {
+            color:#898989;
+        }
+        
+        .links li a:hover,.tagslist li a:hover,#more-tags-listing li a:hover {
+            color:#9d9d9d;
+        }
+        
+    .contributors {
+        margin-top:30px;
+    }
+    
+    .contributors-list {
+        margin-top:5px;
+    }
+        
+    .contributors a {
+        color:#898989;
+        display:block;
+        font-size:.825em;
+        font-weight:normal;
+        margin-bottom:5px;
+        text-decoration:none;
+    }
+    
+        .contributors img {
+            border:solid 1px #000;
+        }
+    
+        .contributors-list a * {
+            display:inline-block;
+            vertical-align:middle;
+        }    
+        
+        
+    .byline {
+        color:#707070;
+        float:right;
+        font-size:10px;
+        padding-top:25px;
+        text-align:right;
+    }
+    
+        .byline a {
+            color:#707070;
+            text-decoration:none;
+        }
+        
+        .byline a:hover {
+            text-decoration:underline;
+        }
+    
+    .posterousPrivateBox {
+        position:absolute;
+        left:0;
+        top:-8px;
+    }
+
+    .Login, .Login a { display: none;}
+    
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="Login">
+{PosterousBar}
+</div>
+    {block:HeaderImage}
+        <h1><a href="{SiteURL}">{Title}</a></h1>
+        {block:Description}<span class="subtitle">{Description}</span>{/block:Description}
+    {Else}
+        <h1><a href="{SiteURL}">{Title}</a></h1>
+        {block:Description}<span class="subtitle">{Description}</span>{/block:Description}
+    {/block:HeaderImage}
+</div>
+
+{block:HasPages}
+    <div class="pages">
+        <ul>
+            {block:Pages}
+                <li class="{Current}"><a href="{URL}">{Label}</a></li>
+            {/block:Pages}
+        </ul>
+    </div>
+{/block:HasPages}
+
+{block:ShowSidebar}
+    <div class="back-to-blog">
+        <a href="{SiteURL}">&laquo; zurück zur Übersicht</a>
+    </div>
+{/block:ShowSidebar}
+
+<div class="posts">
+
+    {block:SearchPage}
+        <div class="search-section">
+                <h2>
+                    {block:SearchResultOne}
+                        One result found searching for
+                    {/block:SearchResultOne}
+                    
+                    {block:SearchResultMany}
+                        {SearchResultCount} results found searching for
+                    {/block:SearchResultMany}
+                    
+                    {block:SearchResultNone}
+                        No results found searching for
+                    {/block:SearchResultNone}
+                </h2>
+                <form method='get'>
+                    <input type='hidden' name='sort' value="{SearchSort}"/>
+                    <input type='text' name='search' value='{SearchQuery}' class="top-search" id="searchbox"/>
+                    <input type='submit' value='Search' class="searchbox_button" id="searchbox_button"/>
+                    &nbsp;&nbsp;<a href="{CurrentURL}" class="xsmall">clear</a>
+                </form>
+            
+                <ul class="searchsort" style="color: #999; font-size: 10px;">
+                        <li style="margin-left: 0px;">Sort by</li>
+                        <li>{block:SearchSortBestmatch}<b>Best match</b>{Else}<a href="{CurrentURL}?search={SearchQuery}&sort=bestmatch">Best match</a>{/block:SearchSortBestmatch}</li>
+                        <li>{block:SearchSortRecent}<b>Most recent</b>{Else}<a href="{CurrentURL}?search={SearchQuery}&sort=recent">Most recent</a>{/block:SearchSortRecent}</li>
+                        <li>{block:SearchSortInteresting}<b>Most interesting</b>{Else}<a href="{CurrentURL}?search={SearchQuery}&sort=interesting">Most interesting</a>{/block:SearchSortInteresting}</li>
+                </ul>
+                <br/>
+                <a href="{PosterousURL}/explore/?search={SearchQuery}" style="font-size: 10px;">Search all of posterous for <b>{SearchQuery}</b> &raquo;</a>
+
+        </div>
+        <br style="clear: left;"/>
+    {/block:SearchPage}
+
+{block:Posts}
+    <div id="postunit_{PostID}" class="postunit">
+        <div id="post_control_{PostID}"></div>
+        {block:ShowOrList}
+            {block:NewDayDate}
+                <a href="{Permalink}" class="timestamp">
+                    <span class="month">{ShortMonth}</span>
+                    <span class="date">{DayOfMonth}</span>
+                </a><!-- /.timestamp -->
+                {block:Show}<div class="viewcount">{PostViews} Views</div>{/block:Show}
+            {/block:NewDayDate}
+        {/block:ShowOrList}
+            {block:Title}<h2 id="posttitle_{PostID}"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+            {block:Private}
+                    <p class="private-post">
+                        <a href="{Permalink}" class="tooltip_link"><img src="/images/icons/lock12.png" width='12' height='12' alt='Private'/>
+                            <span>
+                                <b>Private Post</b><br/>
+                                This post has a secret URL and not linked on your public blog. Send the secret URL to share it with anyone.
+                            </span>
+                        </a>
+                    </p>
+            {/block:Private}
+    
+            {block:EditBox}
+                {EditBoxContents}
+            {/block:EditBox}
+      
+            <div id="post_{PostID}" class="post">
+                {Body}
+            </div><!-- /.post -->
+
+    </div><!-- /.post-unit -->
+        <!-- {block:Favorite hover_id='postunit_{PostID}' position_id='post_{PostID}'/} -->
+{/block:Posts}
+
+{block:Pagination/}
+</div><!-- /.posts -->
+
+<div class="block-bottom-bar-frame">
+    <div class="block-bottom-bar">
+        {block:List}
+            <div class="list-contents">
+                <div class="left" style="width:400px;">
+                    
+                    <h3>Search Blog</h3>
+                    <div class="block-search">
+                        <form method='get'>
+                            <input type='hidden' name='sort' value="{SearchSort}"/>
+                            <input type='text' name='search' value='{SearchQuery}' class="search" id="searchbox"/>
+                            <input type='hidden' value='Search' class="searchbox_button" style="display:none;" id="searchbox_button"/>
+                        </form>
+                        
+                        {block:SearchBox searchbox_button='searchbox_button' searchbox='searchbox'/}
+                    </div>
+                </div><!-- .left -->
+
+                <div class="right" style="width:366px;">
+                <h3>About Me</h3>
+                    <div class="block-profile">
+                        {Profile}    
+                    </div>
+                </div><!-- /.right -->
+                <div class="clear"></div>
+            </div><!-- /.list-contents -->
+        {/block:List}
+        <div class="byline">
+            Dies ist das kostenfreie TwitPixel Theme von <a href="http://twitter.com/Maik_Wi">@Maik_Wi</a>. Weitere Info gibts <a href="http://buntepixel.org/blogging/pffff-twitpic/">hier</a>
+        </div>
+        <div class="clear"></div>
+    </div><!-- /.block-bottom-bar -->
+</div><!-- /.block-bottom-bar-frame -->
+
+</body>
+</html>
