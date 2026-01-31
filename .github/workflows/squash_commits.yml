@@ -1,0 +1,27 @@
+name: Squash Commits
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  squash_commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "commit@maik.io"
+          git config --global user.name "maik-wi"
+
+      - name: Squash all commits
+        run: |
+          git reset --soft $(git commit-tree HEAD^{tree} -m "Single commit")
+          git commit --amend -m "♡"
+
+      - name: Push changes
+        run: |
+          git push --force

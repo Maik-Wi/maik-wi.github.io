@@ -1,0 +1,52 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+.nfs*
+
+# IDEs/Editors
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+
+# Build-Output
+node_modules/
+dist/
+build/
+tmp/
+temp/
+out/
+.cache/
+logs/
+*.log
+
+# Programming Language-specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.class
+*.jar
+*.war
+*.o
+*.obj
+*.exe
+*.out
+
+# Sensitive Files
+.env
+*.key
+*.pem
